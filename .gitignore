@@ -1,0 +1,14 @@
+# Maven
+target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Credentials
+.secure_files/
+
+# OS
+.DS_Store
+Thumbs.db
