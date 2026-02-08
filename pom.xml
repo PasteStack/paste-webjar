@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <packaging>jar</packaging>
-    <groupId>com.tomshley.paste</groupId>
+    <groupId>com.pastestack</groupId>
     <artifactId>paste-webjar</artifactId>
-    <version>0.1.1</version>
+    <version>0.2.0</version>
     <name>paste-webjar</name>
-    <description>WebJar for paste</description>
-    <url>https://tomshley.com</url>
+    <description>WebJar for PasteStack core JS utilities</description>
+    <url>https://github.com/PasteStack/paste</url>
 
     <repositories>
         <repository>
@@ -29,16 +29,16 @@
 
     <licenses>
         <license>
-            <name>The Artistic License 2.0</name>
-            <url>https://raw.githubusercontent.com/tomshley/paste/refs/tags/v0.1.1/LICENSE</url>
+            <name>MIT License</name>
+            <url>https://raw.githubusercontent.com/PasteStack/paste/main/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
-        <url>https://github.com/tomshley/paste-webjar</url>
-        <connection>scm:git:https://github.com/tomshley/paste.git</connection>
-        <developerConnection>scm:git:https://github.com/tomshley/paste.git</developerConnection>
+        <url>https://github.com/PasteStack/paste</url>
+        <connection>scm:git:https://github.com/PasteStack/paste.git</connection>
+        <developerConnection>scm:git:https://github.com/PasteStack/paste.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
@@ -51,8 +51,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>0.1.1</upstreamVersion>
-        <upstream.url>https://github.com/tomshley/paste</upstream.url>
+        <upstreamVersion>0.2.0</upstreamVersion>
+        <upstream.url>https://github.com/PasteStack/paste</upstream.url>
         <extractDir>${project.build.directory}/paste-${upstreamVersion}</extractDir>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
     </properties>
