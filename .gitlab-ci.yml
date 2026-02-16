@@ -40,5 +40,11 @@ deploy:
     - .flow-artifact-publish
   stage: deploy
   script:
+    - |
+      if [ -f ".secure_files/.env" ]; then
+        set -a
+        . .secure_files/.env
+        set +a
+      fi
     - apk add --no-cache maven
     - mvn deploy -s settings.xml
