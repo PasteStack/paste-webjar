@@ -1,0 +1,42 @@
+# Copyright (c) 2024–2026 Tomshley
+#
+# Licensed under the Apache License, Version 2.0
+
+include:
+  - project: 'tomshley/brands/global/tware/tech/products/provisioning/cicd-pipelines'
+    ref: 'v0.4.11'
+    file:
+      - '/gitlab/ci/.stages-base.yml'
+      - '/gitlab/ci/.gitflow-base.yml'
+      - '/gitlab/ci/.gitflow-branch-policy.yml'
+      - '/gitlab/ci/.gitflow-jobs.yml'
+      - '/gitlab/ci/.artifact-tags.yml'
+      - '/gitlab/ci/.artifact-publish-policy.yml'
+      - '/gitlab/ci/.security-scanning.yml'
+      - '/gitlab/ci/.sbt-runtime.yml'
+
+variables:
+  CICD_PIPELINES_RUNNER_TAG: "0.4.11"
+
+# ── Build ─────────────────────────────────────────────────────────────────
+
+compile:
+  extends:
+    - .tomshley-sbt-runtime
+    - .policy-runs-on-any-branch
+  stage: build
+  script:
+    - mvn clean package -s settings.xml
+  artifacts:
+    paths:
+      - target/*.jar
+
+# ── Deploy (gitflow-governed) ─────────────────────────────────────────────
+
+deploy:
+  extends:
+    - .tomshley-sbt-runtime
+    - .flow-artifact-publish
+  stage: deploy
+  script:
+    - mvn deploy -s settings.xml
