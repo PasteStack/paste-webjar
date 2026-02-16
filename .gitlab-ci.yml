@@ -26,6 +26,7 @@ compile:
     - .policy-runs-on-any-branch
   stage: build
   script:
+    - apk add --no-cache maven
     - mvn clean package -s settings.xml
   artifacts:
     paths:
@@ -39,4 +40,5 @@ deploy:
     - .flow-artifact-publish
   stage: deploy
   script:
+    - apk add --no-cache maven
     - mvn deploy -s settings.xml
