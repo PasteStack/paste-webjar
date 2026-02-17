@@ -39,6 +39,9 @@ deploy:
     - .tomshley-sbt-runtime
     - .flow-artifact-publish
   stage: deploy
+  rules:
+    - if: '$TOMSHLEY_CICD_FLOW_TYPE == "tag"'
+      when: manual
   script:
     - |
       if [ -f ".secure_files/.env" ]; then
