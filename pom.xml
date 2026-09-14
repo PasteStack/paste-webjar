@@ -29,8 +29,8 @@
 
     <licenses>
         <license>
-            <name>MIT License</name>
-            <url>https://raw.githubusercontent.com/PasteStack/paste/main/LICENSE</url>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -96,6 +96,18 @@
                                 </exec>
                                 <echo message="moving resources" />
                                 <move file="${extractDir}/src" toDir="${destDir}" />
+                                <!-- The jar redistributes upstream's sources, so it must
+                                     carry upstream's license text and any notice with
+                                     them. A missing file fails the build rather than
+                                     publishing a redistribution without its terms. -->
+                                <echo message="moving upstream license" />
+                                <copy file="${extractDir}/LICENSE" toDir="${destDir}" />
+                                <copy toDir="${destDir}">
+                                    <fileset dir="${extractDir}" erroronmissingdir="false">
+                                        <include name="NOTICE.md" />
+                                        <include name="NOTICE" />
+                                    </fileset>
+                                </copy>
                             </target>
                         </configuration>
                     </execution>
