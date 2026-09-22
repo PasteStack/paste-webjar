@@ -1,4 +1,6 @@
-# Unreleased
+# paste-webjar v2.0.2
+
+**Date:** 2026-09-22
 
 ## Fixed
 
