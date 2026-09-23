@@ -1,3 +1,18 @@
+# paste-webjar v2.1.0
+
+**Date:** 2026-09-23
+
+## Changed
+
+- Packages `paste` 2.1.0: `paste.io` reports a reply without a `Content-Type`
+  or with an unparseable JSON body through `onFailure` instead of throwing.
+
+## Fixed
+
+- `NOTICE.md` no longer lists the json2.js, html5shiv and selectivizr sources.
+  Upstream removed them in `paste` 2.0.2, so the 2.0.2 jar did not carry them
+  either, although its notice still named them.
+
 # paste-webjar v2.0.2
 
 **Date:** 2026-09-22
