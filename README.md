@@ -23,7 +23,7 @@ the pin it was built from in `META-INF/paste-upstream.properties`.
 <dependency>
   <groupId>com.pastestack</groupId>
   <artifactId>paste-webjar</artifactId>
-  <version>2.0.2</version>
+  <version>2.1.0</version>
 </dependency>
 ```
 
@@ -31,7 +31,7 @@ the pin it was built from in `META-INF/paste-upstream.properties`.
 // build.sbt
 resolvers += "paste-registry" at "https://gitlab.com/api/v4/projects/70289607/packages/maven"
 
-libraryDependencies += "com.pastestack" % "paste-webjar" % "2.0.2"
+libraryDependencies += "com.pastestack" % "paste-webjar" % "2.1.0"
 ```
 
 Assets resolve at `/webjars/paste-webjar/{version}/...`.
@@ -74,6 +74,6 @@ mvn --settings ./settings.xml deploy
 This repository's build files: Apache License, Version 2.0 (`LICENSE`, `NOTICE.md`).
 
 The published jar contains only the packaged upstream tree, so its terms are that
-tree's — Apache-2.0 for `paste`, both for the 2.0.2 release and for the pinned
+tree's — Apache-2.0 for `paste`, both for the 2.1.0 release and for the pinned
 development archive, as `pom.xml` declares. The upstream `LICENSE` travels inside
 the jar.
