@@ -14,7 +14,7 @@ of the PasteStack project.
 This repository's own build files are licensed under the **Apache License,
 Version 2.0**; the full text is in the `LICENSE` file at the root of this
 repository. The published jar's terms are the packaged upstream version's: upstream
-`paste` 2.0.1 is Apache-2.0 licensed, which is what `pom.xml` declares.
+`paste` 2.1.0 is Apache-2.0 licensed, which is what `pom.xml` declares.
 
 ---
 
@@ -40,16 +40,6 @@ This repository carries no sources of its own beyond the build. What the jar
 redistributes is decided by `upstreamVersion`, so the notices below describe that
 version's contents rather than this repository's.
 
-Upstream `paste` 2.0.1 includes the following third-party components under their
-own terms. Each file retains its upstream notice, and those terms govern the
-third-party portions rather than the Apache License 2.0 grant above.
-
-| Path in the packaged sources | Component | Terms |
-|---|---|---|
-| `js/polyfills/ie8head/json2.js` | json2.js (json.org) | Public domain |
-| `js/polyfills/ie8head/html5.js` | html5shiv / iepp | MIT or GPL-2.0, at the recipient's option |
-| `js/polyfills/selectors.js` | selectivizr (Keith Clark), with ContentLoaded.js (Diego Perini) — forked, with local modifications | MIT |
-
-Upstream has since removed all three. This section is cleared in the same change
-that raises `upstreamVersion` to the release that drops them — not before, because
-until then the jar still ships them.
+Upstream `paste` 2.1.0 bundles no third-party source code. The json2.js,
+html5shiv and selectivizr sources earlier upstream releases carried were removed
+in `paste` 2.0.2.
