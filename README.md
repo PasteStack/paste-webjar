@@ -71,7 +71,7 @@ mvn --settings ./settings.xml deploy
 
 ## License
 
-This repository's build files: Apache License, Version 2.0 (`LICENSE`, `NOTICE.md`).
+This repository's build files: Apache License, Version 2.0 (`LICENSE`, `NOTICE`).
 
 The published jar contains only the packaged upstream tree, so its terms are that
 tree's — Apache-2.0 for `paste`, both for the 2.1.0 release and for the pinned

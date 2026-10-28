@@ -1,3 +1,13 @@
+# paste-webjar v2.1.1
+
+**Date:** 2026-10-28
+
+## Changed
+
+- Apache License 2.0 applied consistently: verbatim LICENSE text, NOTICE rename, Apache short header in every first-party source file, corrected license metadata.
+
+---
+
 # paste-webjar v2.1.0
 
 **Date:** 2026-09-23
@@ -9,7 +19,7 @@
 
 ## Fixed
 
-- `NOTICE.md` no longer lists the json2.js, html5shiv and selectivizr sources.
+- `NOTICE` no longer lists the json2.js, html5shiv and selectivizr sources.
   Upstream removed them in `paste` 2.0.2, so the 2.0.2 jar did not carry them
   either, although its notice still named them.
 
@@ -35,10 +45,10 @@
 ## Licensing
 
 - This repository's own build files are licensed under the Apache License,
-  Version 2.0 (`LICENSE`, `NOTICE.md`). The pom's `<licenses>` describes the packaged
+  Version 2.0 (`LICENSE`, `NOTICE`). The pom's `<licenses>` describes the packaged
   `upstreamVersion` and now matches it; it previously named MIT for Apache-2.0
   licensed upstream sources.
-- `NOTICE.md` records the third-party components the packaged sources carry, keyed
+- `NOTICE` records the third-party components the packaged sources carry, keyed
   to `upstreamVersion` rather than to this repository, since that property decides
   what the jar redistributes.
 
