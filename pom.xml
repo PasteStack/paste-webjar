@@ -66,7 +66,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>2.1.0</upstreamVersion>
+        <upstreamVersion>2.1.1</upstreamVersion>
         <upstream.url>https://github.com/PasteStack/paste</upstream.url>
         <upstream.release.skip>false</upstream.release.skip>
         <extractDir>${project.build.directory}/paste-${upstreamVersion}</extractDir>
